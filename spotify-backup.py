@@ -186,7 +186,7 @@ def main():
 		# Tab-separated file.
 		else:
 			for playlist in playlists:
-				f.write(playlist['name'] + '\r\n')
+				f.write(playlist['name'] + '\t' + str(len(playlist['tracks'])) + '\r\n')
 				for track in playlist['tracks']:
 					if track['track'] is None:
 						continue
